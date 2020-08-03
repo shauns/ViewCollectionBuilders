@@ -19,7 +19,7 @@ public struct WithTag<TagType: Hashable, Content: Any> {
   public var tag: TagType
   public var content: () -> Content
 
-  init(_ tag: TagType, _ content: @escaping () -> Content) {
+  public init(_ tag: TagType, _ content: @escaping () -> Content) {
     self.tag = tag
     self.content = content
   }
