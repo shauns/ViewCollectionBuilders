@@ -58,3 +58,7 @@ UsesMapping(key: Binding.constant("World")) {
 }
 
 ```
+
+## Helpers
+
+The `TaggedView` and `WithTag` containers help with pairing a tag to a view function, the main difference being that `WithTag` has strongly typed content, but `TaggedView` is agnostic and wraps things up in an `AnyView`. 

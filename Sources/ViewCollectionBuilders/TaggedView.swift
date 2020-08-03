@@ -13,3 +13,14 @@ public struct TaggedView<TagType: Hashable> {
     }
   }
 }
+
+/// Similar to `TaggedView`, but has a strongly typed content function
+public struct WithTag<TagType: Hashable, Content: Any> {
+  var tag: TagType
+  var content: () -> Content
+
+  init(_ tag: TagType, _ content: @escaping () -> Content) {
+    self.tag = tag
+    self.content = content
+  }
+}
